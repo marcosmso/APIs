@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {},
+	"extensions": {
+		"recommendations": [
+			"donjayamanne.githistory",
+			"eamodio.gitlens",
+			"christian-kohler.path-intellisense",
+			"Gruntfuggly.todo-tree",
+			"umoxfo.vscode-w3cvalidation",
+			"ritwickdey.liveserver",
+			"syler.sass-indented"
+		]
+	}
+}

@@ -2,23 +2,18 @@
 const express = require('express');
 const ejs = require('ejs');
 const mongoose = require('mongoose');
+const {Article} = require(__dirname + '/models/article.js');
 
 const app = express();
 
 app.set("view engine", "ejs");
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
+
 mongoose.set('useFindAndModify', false);
-
 mongoose.connect("mongodb://localhost:27017/wikiDB", { useNewUrlParser: true, useUnifiedTopology: true });
-
-const articleSchema = new mongoose.Schema({
-    title: String,
-    content: String
-});
-
-const Article = mongoose.model('Article', articleSchema);
 
 ////////////////// Resquests targeting all articles ////////////////////
 
